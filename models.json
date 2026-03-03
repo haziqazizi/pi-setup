@@ -1,0 +1,62 @@
+{
+  "providers": {
+    "fireworks": {
+      "baseUrl": "https://api.fireworks.ai/inference/v1",
+      "api": "openai-completions",
+      "apiKey": "FIREWORKS_API_KEY",
+      "compat": {
+        "maxTokensField": "max_tokens",
+        "supportsDeveloperRole": false,
+        "supportsStore": false
+      },
+      "models": [
+        {
+          "id": "accounts/fireworks/models/kimi-k2p5",
+          "name": "Kimi K2.5",
+          "reasoning": true,
+          "input": ["text", "image"],
+          "contextWindow": 262144,
+          "maxTokens": 32768,
+          "compat": {
+            "supportsReasoningEffort": true
+          }
+        },
+        {
+          "id": "accounts/fireworks/models/deepseek-v3p1",
+          "name": "DeepSeek V3.1",
+          "reasoning": false,
+          "input": ["text"],
+          "contextWindow": 131072,
+          "maxTokens": 65536
+        },
+        {
+          "id": "accounts/fireworks/models/deepseek-v3p2",
+          "name": "DeepSeek V3.2 (Reasoning)",
+          "reasoning": true,
+          "input": ["text"],
+          "contextWindow": 131072,
+          "maxTokens": 65536,
+          "compat": {
+            "supportsReasoningEffort": true
+          }
+        },
+        {
+          "id": "accounts/fireworks/models/kimi-k2-instruct-0905",
+          "name": "Kimi K2",
+          "reasoning": false,
+          "input": ["text"],
+          "contextWindow": 131072,
+          "maxTokens": 65536
+        },
+        {
+          "id": "accounts/fireworks/models/qwen2p5-vl-32b-instruct",
+          "name": "Qwen 2.5 VL 32B",
+          "reasoning": false,
+          "input": ["text", "image"],
+          "contextWindow": 131072,
+          "maxTokens": 32768
+        }
+      ]
+    }
+  }
+}

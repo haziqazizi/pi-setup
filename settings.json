@@ -1,7 +1,9 @@
 {
   "defaultProvider": "fireworks",
-  "defaultModel": "accounts/fireworks/models/kimi-k2p5",
+  "defaultModel": "accounts/fireworks/models/minimax-m2p5",
   "packages": [
     "npm:mitsupi"
-  ]
+  ],
+  "defaultThinkingLevel": "medium",
+  "hideThinkingBlock": false
 }

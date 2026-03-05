@@ -19,7 +19,8 @@
           "reasoning": false,
           "input": ["text"],
           "contextWindow": 131072,
-          "maxTokens": 65536
+          "maxTokens": 65536,
+          "cost": { "input": 0.56, "output": 1.68, "cacheRead": 0.28, "cacheWrite": 0 }
         },
         {
           "id": "accounts/fireworks/models/deepseek-v3p2",
@@ -28,6 +29,7 @@
           "input": ["text"],
           "contextWindow": 131072,
           "maxTokens": 65536,
+          "cost": { "input": 0.56, "output": 1.68, "cacheRead": 0.28, "cacheWrite": 0 },
           "compat": {
             "supportsReasoningEffort": true
           }
@@ -38,7 +40,8 @@
           "reasoning": false,
           "input": ["text"],
           "contextWindow": 131072,
-          "maxTokens": 65536
+          "maxTokens": 65536,
+          "cost": { "input": 0.60, "output": 2.50, "cacheRead": 0.30, "cacheWrite": 0 }
         },
         {
           "id": "accounts/fireworks/models/kimi-k2p5",
@@ -47,6 +50,7 @@
           "input": ["text", "image"],
           "contextWindow": 262144,
           "maxTokens": 32768,
+          "cost": { "input": 0.60, "output": 3.00, "cacheRead": 0.10, "cacheWrite": 0 },
           "compat": {
             "supportsReasoningEffort": true
           }
@@ -57,7 +61,8 @@
           "reasoning": false,
           "input": ["text"],
           "contextWindow": 196608,
-          "maxTokens": 65536
+          "maxTokens": 65536,
+          "cost": { "input": 0.30, "output": 1.20, "cacheRead": 0.03, "cacheWrite": 0 }
         },
         {
           "id": "accounts/fireworks/models/qwen2p5-vl-32b-instruct",
@@ -65,7 +70,8 @@
           "reasoning": false,
           "input": ["text", "image"],
           "contextWindow": 131072,
-          "maxTokens": 32768
+          "maxTokens": 32768,
+          "cost": { "input": 0.20, "output": 0.20, "cacheRead": 0.10, "cacheWrite": 0 }
         }
       ]
     }

@@ -8,10 +8,10 @@ cd pi-setup
 ./setup.sh
 ```
 
-Then set your [Fireworks AI](https://fireworks.ai) API key and start coding:
+Then set your API key and start coding:
 
 ```bash
-export FIREWORKS_API_KEY=your-key
+export ANTHROPIC_API_KEY=your-key
 pi
 ```
 
@@ -21,7 +21,7 @@ pi
 
 ### Default model
 
-**MiniMax M2.5** via Fireworks — 196k context, 255 t/s output speed (5x faster than MiniMax direct), $0.30/M input tokens, $1.20/M output tokens. Scores 80.2% on SWE-Bench Verified — nearly identical to Claude Opus 4.6 (80.8%) at a fraction of the cost.
+**Claude Opus 4.6** via Anthropic — top-tier coding model with 200k context. Scores 80.8% on SWE-Bench Verified. Fireworks models (MiniMax M2.5, DeepSeek, Kimi, Qwen) are also configured as cheaper alternatives.
 
 ### All available models
 
@@ -76,7 +76,7 @@ Even without caching, MiniMax on Fireworks is ~$28/mo for heavy daily use — th
 
 ## Skills
 
-Four architecture skills for Rails and Flutter development:
+Five skills for Rails, Flutter, and library documentation:
 
 | Skill | Lines | What it covers |
 |-------|-------|----------------|
@@ -84,6 +84,7 @@ Four architecture skills for Rails and Flutter development:
 | **rails-fullstack** | 334 | View components, presenters, form objects, Turbo/Hotwire patterns |
 | **rspec-testing** | 110 | Three-layer testing strategy, flaky test prevention, factory best practices |
 | **flutter-arch** | 372 | Services → Repositories → ValueNotifiers, Result pattern, contract testing, cursor pagination, isolate parsing |
+| **context7** | — | Fetches up-to-date library docs from Context7. Discovery tool for unfamiliar libraries, version-specific docs, code examples |
 
 ### Packages
 

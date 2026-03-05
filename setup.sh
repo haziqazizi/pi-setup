@@ -11,22 +11,35 @@ if ! command -v pi &>/dev/null; then
   npm install -g @mariozechner/pi-coding-agent
 fi
 
-# 2. Copy config
+# 2. Install mcporter (needed by context7 and other MCP-based skills)
+if ! command -v mcporter &>/dev/null; then
+  echo "📦 Installing mcporter..."
+  npm install -g mcporter
+fi
+
+# 3. Copy config
 echo "⚙️  Copying config..."
 mkdir -p ~/.pi/agent
 cp -n "$SCRIPT_DIR/settings.json" ~/.pi/agent/settings.json 2>/dev/null || true
 cp -n "$SCRIPT_DIR/models.json" ~/.pi/agent/models.json 2>/dev/null || true
 cp -n "$SCRIPT_DIR/AGENTS.md" ~/.pi/agent/AGENTS.md 2>/dev/null || true
 
-# 3. Install packages
+# 4. Install packages
 echo "📦 Installing packages..."
 pi install npm:mitsupi
 
-# 4. Install skills
+# 5. Install skills to ~/.agents/skills/
 echo "🧠 Installing skills..."
+mkdir -p ~/.agents/skills
 for skill_dir in "$SCRIPT_DIR"/skills/*/; do
   skill_name=$(basename "$skill_dir")
-  pi install "$skill_dir" 2>/dev/null || echo "  Skill $skill_name: copy manually to ~/.pi/skills/$skill_name"
+  target="$HOME/.agents/skills/$skill_name"
+  if [ -d "$target" ]; then
+    echo "  $skill_name: already exists, skipping"
+  else
+    cp -r "$skill_dir" "$target"
+    echo "  $skill_name: installed"
+  fi
 done
 
 echo ""

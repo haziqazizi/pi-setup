@@ -16,6 +16,7 @@ echo "⚙️  Copying config..."
 mkdir -p ~/.pi/agent
 cp -n "$SCRIPT_DIR/settings.json" ~/.pi/agent/settings.json 2>/dev/null || true
 cp -n "$SCRIPT_DIR/models.json" ~/.pi/agent/models.json 2>/dev/null || true
+cp -n "$SCRIPT_DIR/AGENTS.md" ~/.pi/agent/AGENTS.md 2>/dev/null || true
 
 # 3. Install packages
 echo "📦 Installing packages..."
